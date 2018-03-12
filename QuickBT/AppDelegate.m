@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "BluetoothManagerHandler.h"
+
+NSString * const NOTIFICATIONS[] = { @"BluetoothPowerChangedNotification", @"BluetoothAvailabilityChangedNotification", @"BluetoothDeviceDiscoveredNotification", @"BluetoothDeviceRemovedNotification", @"BluetoothConnectabilityChangedNotification", @"BluetoothDeviceUpdatedNotification", @"BluetoothDiscoveryStateChangedNotification", @"BluetoothDeviceConnectSuccessNotification", @"BluetoothConnectionStatusChangedNotification", @"BluetoothDeviceDisconnectSuccessNotification" };
 
 @interface AppDelegate ()
 
@@ -14,9 +17,41 @@
 
 @implementation AppDelegate
 
++ (NSArray *)allNotifications
+{
+    static NSArray *_notifications;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _notifications = @[ @"BluetoothPowerChangedNotification", @"BluetoothAvailabilityChangedNotification", @"BluetoothDeviceDiscoveredNotification", @"BluetoothDeviceRemovedNotification", @"BluetoothConnectabilityChangedNotification", @"BluetoothDeviceUpdatedNotification", @"BluetoothDiscoveryStateChangedNotification", @"BluetoothDeviceConnectSuccessNotification", @"BluetoothConnectionStatusChangedNotification", @"BluetoothDeviceDisconnectSuccessNotification" ];
+    });
+    return _notifications;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    BluetoothManagerHandler *bluetoothManagerHandle = [BluetoothManagerHandler sharedInstance];
+    [bluetoothManagerHandle enable];
+    [bluetoothManagerHandle startScan];
+    for (NSString *notification in [[self class] allNotifications]) {
+        [[NSNotificationCenter defaultCenter] addObserverForName:notification
+                                                          object:nil
+                                                           queue:[NSOperationQueue mainQueue]
+                                                      usingBlock:^(NSNotification * _Nonnull note) {
+                                                          NSLog(@"%@", note.name);
+                                                          if ([note.name isEqual: @"BluetoothDeviceDiscoveredNotification"]) {
+                                                              BluetoothDevice *device = note.object;
+                                                              NSLog(@"%@", device.name);
+                                                              if ([device.name isEqualToString:@"MDR-1000X"]) {
+                                                                  [bluetoothManagerHandle connectDevice:device withServices:0x00000010];
+                                                              }
+                                                          } else if ([note.name isEqualToString:@"BluetoothDeviceConnectSuccessNotification"]) {
+                                                              [bluetoothManagerHandle stopScan];
+                                                              exit(0);
+                                                          }
+                                                      }];
+    }
     return YES;
 }
 

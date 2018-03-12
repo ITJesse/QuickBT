@@ -13,6 +13,9 @@
 		486E93752056DA8F001D4554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E93742056DA8F001D4554 /* Assets.xcassets */; };
 		486E93782056DA8F001D4554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486E93762056DA8F001D4554 /* LaunchScreen.storyboard */; };
 		486E937B2056DA8F001D4554 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E937A2056DA8F001D4554 /* main.m */; };
+		486E93882056DC2A001D4554 /* BluetoothDeviceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E93842056DC2A001D4554 /* BluetoothDeviceHandler.m */; };
+		486E93892056DC2A001D4554 /* BluetoothManagerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E93872056DC2A001D4554 /* BluetoothManagerHandler.m */; };
+		486E938B2056E3A7001D4554 /* QuickBT.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E938A2056E3A7001D4554 /* QuickBT.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		486E93772056DA8F001D4554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		486E93792056DA8F001D4554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		486E937A2056DA8F001D4554 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		486E93822056DC2A001D4554 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
+		486E93832056DC2A001D4554 /* BluetoothDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDevice.h; sourceTree = "<group>"; };
+		486E93842056DC2A001D4554 /* BluetoothDeviceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothDeviceHandler.m; sourceTree = "<group>"; };
+		486E93852056DC2A001D4554 /* BluetoothManagerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManagerHandler.h; sourceTree = "<group>"; };
+		486E93862056DC2A001D4554 /* BluetoothDeviceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDeviceHandler.h; sourceTree = "<group>"; };
+		486E93872056DC2A001D4554 /* BluetoothManagerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothManagerHandler.m; sourceTree = "<group>"; };
+		486E938A2056E3A7001D4554 /* QuickBT.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickBT.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,12 @@
 		486E936A2056DA8E001D4554 /* QuickBT */ = {
 			isa = PBXGroup;
 			children = (
+				486E938A2056E3A7001D4554 /* QuickBT.m */,
+				486E93862056DC2A001D4554 /* BluetoothDeviceHandler.h */,
+				486E93842056DC2A001D4554 /* BluetoothDeviceHandler.m */,
+				486E93852056DC2A001D4554 /* BluetoothManagerHandler.h */,
+				486E93872056DC2A001D4554 /* BluetoothManagerHandler.m */,
+				486E93812056DC2A001D4554 /* Private Headers */,
 				486E936B2056DA8E001D4554 /* AppDelegate.h */,
 				486E936C2056DA8E001D4554 /* AppDelegate.m */,
 				486E936E2056DA8E001D4554 /* ViewController.h */,
@@ -69,6 +85,15 @@
 				486E937A2056DA8F001D4554 /* main.m */,
 			);
 			path = QuickBT;
+			sourceTree = "<group>";
+		};
+		486E93812056DC2A001D4554 /* Private Headers */ = {
+			isa = PBXGroup;
+			children = (
+				486E93822056DC2A001D4554 /* BluetoothManager.h */,
+				486E93832056DC2A001D4554 /* BluetoothDevice.h */,
+			);
+			path = "Private Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				486E93702056DA8E001D4554 /* ViewController.m in Sources */,
+				486E93892056DC2A001D4554 /* BluetoothManagerHandler.m in Sources */,
 				486E937B2056DA8F001D4554 /* main.m in Sources */,
+				486E938B2056E3A7001D4554 /* QuickBT.m in Sources */,
 				486E936D2056DA8E001D4554 /* AppDelegate.m in Sources */,
+				486E93882056DC2A001D4554 /* BluetoothDeviceHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

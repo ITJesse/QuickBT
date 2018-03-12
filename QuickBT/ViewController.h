@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UITableViewController
 
+- (IBAction)onBluetoothPowerButtonSwitch:(id)sender;
+- (IBAction)onBluetoothScanButtonSwitch:(id)sender;
 
 @end
 
