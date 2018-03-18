@@ -42,9 +42,7 @@
 - (void)_restartScan;
 - (void)_scanForServices:(unsigned int)arg1 withMode:(int)arg2;
 - (void)_setScanState:(int)arg1;
-- (BOOL)_setup:(struct BTSessionImpl { }*)arg1;
 - (void)acceptSSP:(int)arg1 forDevice:(id)arg2;
-- (id)addDeviceIfNeeded:(struct BTDeviceImpl { }*)arg1;
 - (BOOL)audioConnected;
 - (BOOL)available;
 - (void)cancelPairing;
