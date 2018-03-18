@@ -3,44 +3,44 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48191488205C52D4002426AE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48191487205C52D4002426AE /* MainViewController.swift */; };
-		4819148A205C573D002426AE /* QuickBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48191489205C573D002426AE /* QuickBT.swift */; };
-		4819148C205C5DE9002426AE /* BluetoothDeviceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4819148B205C5DE9002426AE /* BluetoothDeviceHandler.m */; };
-		481914AD205EE687002426AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481914AC205EE687002426AE /* AppDelegate.swift */; };
-		481914E0205EFA46002426AE /* RunAfterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481914DF205EFA46002426AE /* RunAfterViewController.swift */; };
-		481914E3205EFFF7002426AE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481914E2205EFFF7002426AE /* Config.swift */; };
-		486E93732056DA8E001D4554 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486E93712056DA8E001D4554 /* Main.storyboard */; };
-		486E93752056DA8F001D4554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486E93742056DA8F001D4554 /* Assets.xcassets */; };
-		486E93782056DA8F001D4554 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486E93762056DA8F001D4554 /* LaunchScreen.storyboard */; };
-		486E93892056DC2A001D4554 /* BluetoothManagerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 486E93872056DC2A001D4554 /* BluetoothManagerHandler.m */; };
+		48098A0B205F2C8C00445E6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48098A0A205F2C8C00445E6A /* AppDelegate.swift */; };
+		48098A10205F2C8C00445E6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48098A0E205F2C8C00445E6A /* Main.storyboard */; };
+		48098A12205F2C8C00445E6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48098A11205F2C8C00445E6A /* Assets.xcassets */; };
+		48098A15205F2C8C00445E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48098A13205F2C8C00445E6A /* LaunchScreen.storyboard */; };
+		48EF03C8205F2F7D00964761 /* BluetoothDeviceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EF03BA205F2F7D00964761 /* BluetoothDeviceHandler.m */; };
+		48EF03C9205F2F7D00964761 /* BluetoothManagerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EF03BD205F2F7D00964761 /* BluetoothManagerHandler.m */; };
+		48EF03CA205F2F7D00964761 /* QuickBT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EF03C2205F2F7D00964761 /* QuickBT.swift */; };
+		48EF03CB205F2F7D00964761 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EF03C4205F2F7D00964761 /* MainViewController.swift */; };
+		48EF03CC205F2F7D00964761 /* RunAfterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EF03C5205F2F7D00964761 /* RunAfterViewController.swift */; };
+		48EF03CD205F2F7D00964761 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EF03C6205F2F7D00964761 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		48191486205C52D3002426AE /* QuickBT-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickBT-Bridging-Header.h"; sourceTree = "<group>"; };
-		48191487205C52D4002426AE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		48191489205C573D002426AE /* QuickBT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBT.swift; sourceTree = "<group>"; };
-		4819148B205C5DE9002426AE /* BluetoothDeviceHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothDeviceHandler.m; sourceTree = "<group>"; };
-		4819148D205C5E1C002426AE /* BluetoothDeviceHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothDeviceHandler.h; sourceTree = "<group>"; };
-		481914AC205EE687002426AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		481914DF205EFA46002426AE /* RunAfterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunAfterViewController.swift; sourceTree = "<group>"; };
-		481914E2205EFFF7002426AE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		486E93682056DA8E001D4554 /* QuickBT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickBT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		486E93722056DA8E001D4554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		486E93742056DA8F001D4554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		486E93772056DA8F001D4554 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		486E93792056DA8F001D4554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		486E93822056DC2A001D4554 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
-		486E93832056DC2A001D4554 /* BluetoothDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDevice.h; sourceTree = "<group>"; };
-		486E93872056DC2A001D4554 /* BluetoothManagerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothManagerHandler.m; sourceTree = "<group>"; };
-		48AB821D2056FC6200597FCA /* BluetoothManagerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManagerHandler.h; sourceTree = "<group>"; };
+		48098A07205F2C8C00445E6A /* QuickBT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickBT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48098A0A205F2C8C00445E6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48098A0F205F2C8C00445E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48098A11205F2C8C00445E6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48098A14205F2C8C00445E6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48098A16205F2C8C00445E6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48098A3A205F317200445E6A /* QuickBT-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QuickBT-Bridging-Header.h"; sourceTree = "<group>"; };
+		48EF03BA205F2F7D00964761 /* BluetoothDeviceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothDeviceHandler.m; sourceTree = "<group>"; };
+		48EF03BB205F2F7D00964761 /* BluetoothManagerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManagerHandler.h; sourceTree = "<group>"; };
+		48EF03BC205F2F7D00964761 /* BluetoothDeviceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDeviceHandler.h; sourceTree = "<group>"; };
+		48EF03BD205F2F7D00964761 /* BluetoothManagerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothManagerHandler.m; sourceTree = "<group>"; };
+		48EF03C0205F2F7D00964761 /* BluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
+		48EF03C1205F2F7D00964761 /* BluetoothDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDevice.h; sourceTree = "<group>"; };
+		48EF03C2205F2F7D00964761 /* QuickBT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickBT.swift; sourceTree = "<group>"; };
+		48EF03C4205F2F7D00964761 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		48EF03C5205F2F7D00964761 /* RunAfterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunAfterViewController.swift; sourceTree = "<group>"; };
+		48EF03C6205F2F7D00964761 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		486E93652056DA8E001D4554 /* Frameworks */ = {
+		48098A04205F2C8C00445E6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,79 +50,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		481914DE205EF9A1002426AE /* View */ = {
+		480989FE205F2C8B00445E6A = {
 			isa = PBXGroup;
 			children = (
-				48191487205C52D4002426AE /* MainViewController.swift */,
-				481914DF205EFA46002426AE /* RunAfterViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		481914E1205EFFC8002426AE /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-				486E93872056DC2A001D4554 /* BluetoothManagerHandler.m */,
-				48AB821D2056FC6200597FCA /* BluetoothManagerHandler.h */,
-				4819148B205C5DE9002426AE /* BluetoothDeviceHandler.m */,
-				4819148D205C5E1C002426AE /* BluetoothDeviceHandler.h */,
-			);
-			path = Handler;
-			sourceTree = "<group>";
-		};
-		486E935F2056DA8E001D4554 = {
-			isa = PBXGroup;
-			children = (
-				486E936A2056DA8E001D4554 /* QuickBT */,
-				486E93692056DA8E001D4554 /* Products */,
+				48098A09205F2C8C00445E6A /* QuickBT */,
+				48098A08205F2C8C00445E6A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		486E93692056DA8E001D4554 /* Products */ = {
+		48098A08205F2C8C00445E6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				486E93682056DA8E001D4554 /* QuickBT.app */,
+				48098A07205F2C8C00445E6A /* QuickBT.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		486E936A2056DA8E001D4554 /* QuickBT */ = {
+		48098A09205F2C8C00445E6A /* QuickBT */ = {
 			isa = PBXGroup;
 			children = (
-				481914E1205EFFC8002426AE /* Handler */,
-				481914DE205EF9A1002426AE /* View */,
-				48191489205C573D002426AE /* QuickBT.swift */,
-				481914E2205EFFF7002426AE /* Config.swift */,
-				481914AC205EE687002426AE /* AppDelegate.swift */,
-				486E93712056DA8E001D4554 /* Main.storyboard */,
-				486E93762056DA8F001D4554 /* LaunchScreen.storyboard */,
-				486E93792056DA8F001D4554 /* Info.plist */,
-				48191486205C52D3002426AE /* QuickBT-Bridging-Header.h */,
-				486E93742056DA8F001D4554 /* Assets.xcassets */,
-				486E93812056DC2A001D4554 /* Private Headers */,
+				48EF03B9205F2F7D00964761 /* Handler */,
+				48EF03C3205F2F7D00964761 /* View */,
+				48EF03BF205F2F7D00964761 /* Private Headers */,
+				48EF03C2205F2F7D00964761 /* QuickBT.swift */,
+				48EF03C6205F2F7D00964761 /* Config.swift */,
+				48098A0A205F2C8C00445E6A /* AppDelegate.swift */,
+				48098A3A205F317200445E6A /* QuickBT-Bridging-Header.h */,
+				48098A0E205F2C8C00445E6A /* Main.storyboard */,
+				48098A13205F2C8C00445E6A /* LaunchScreen.storyboard */,
+				48098A11205F2C8C00445E6A /* Assets.xcassets */,
+				48098A16205F2C8C00445E6A /* Info.plist */,
 			);
 			path = QuickBT;
 			sourceTree = "<group>";
 		};
-		486E93812056DC2A001D4554 /* Private Headers */ = {
+		48EF03B9205F2F7D00964761 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
-				486E93822056DC2A001D4554 /* BluetoothManager.h */,
-				486E93832056DC2A001D4554 /* BluetoothDevice.h */,
+				48EF03BA205F2F7D00964761 /* BluetoothDeviceHandler.m */,
+				48EF03BB205F2F7D00964761 /* BluetoothManagerHandler.h */,
+				48EF03BC205F2F7D00964761 /* BluetoothDeviceHandler.h */,
+				48EF03BD205F2F7D00964761 /* BluetoothManagerHandler.m */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		48EF03BF205F2F7D00964761 /* Private Headers */ = {
+			isa = PBXGroup;
+			children = (
+				48EF03C0205F2F7D00964761 /* BluetoothManager.h */,
+				48EF03C1205F2F7D00964761 /* BluetoothDevice.h */,
 			);
 			path = "Private Headers";
+			sourceTree = "<group>";
+		};
+		48EF03C3205F2F7D00964761 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48EF03C4205F2F7D00964761 /* MainViewController.swift */,
+				48EF03C5205F2F7D00964761 /* RunAfterViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		486E93672056DA8E001D4554 /* QuickBT */ = {
+		48098A06205F2C8C00445E6A /* QuickBT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 486E937E2056DA8F001D4554 /* Build configuration list for PBXNativeTarget "QuickBT" */;
+			buildConfigurationList = 48098A19205F2C8C00445E6A /* Build configuration list for PBXNativeTarget "QuickBT" */;
 			buildPhases = (
-				486E93642056DA8E001D4554 /* Sources */,
-				486E93652056DA8E001D4554 /* Frameworks */,
-				486E93662056DA8E001D4554 /* Resources */,
+				48098A03205F2C8C00445E6A /* Sources */,
+				48098A04205F2C8C00445E6A /* Frameworks */,
+				48098A05205F2C8C00445E6A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -130,85 +130,86 @@
 			);
 			name = QuickBT;
 			productName = QuickBT;
-			productReference = 486E93682056DA8E001D4554 /* QuickBT.app */;
+			productReference = 48098A07205F2C8C00445E6A /* QuickBT.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		486E93602056DA8E001D4554 /* Project object */ = {
+		480989FF205F2C8B00445E6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Jesse Zhu";
 				TargetAttributes = {
-					486E93672056DA8E001D4554 = {
-						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
+					48098A06205F2C8C00445E6A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 486E93632056DA8E001D4554 /* Build configuration list for PBXProject "QuickBT" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 48098A02205F2C8B00445E6A /* Build configuration list for PBXProject "QuickBT" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 486E935F2056DA8E001D4554;
-			productRefGroup = 486E93692056DA8E001D4554 /* Products */;
+			mainGroup = 480989FE205F2C8B00445E6A;
+			productRefGroup = 48098A08205F2C8C00445E6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				486E93672056DA8E001D4554 /* QuickBT */,
+				48098A06205F2C8C00445E6A /* QuickBT */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		486E93662056DA8E001D4554 /* Resources */ = {
+		48098A05205F2C8C00445E6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				486E93782056DA8F001D4554 /* LaunchScreen.storyboard in Resources */,
-				486E93752056DA8F001D4554 /* Assets.xcassets in Resources */,
-				486E93732056DA8E001D4554 /* Main.storyboard in Resources */,
+				48098A15205F2C8C00445E6A /* LaunchScreen.storyboard in Resources */,
+				48098A12205F2C8C00445E6A /* Assets.xcassets in Resources */,
+				48098A10205F2C8C00445E6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		486E93642056DA8E001D4554 /* Sources */ = {
+		48098A03205F2C8C00445E6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48191488205C52D4002426AE /* MainViewController.swift in Sources */,
-				481914E0205EFA46002426AE /* RunAfterViewController.swift in Sources */,
-				486E93892056DC2A001D4554 /* BluetoothManagerHandler.m in Sources */,
-				481914E3205EFFF7002426AE /* Config.swift in Sources */,
-				481914AD205EE687002426AE /* AppDelegate.swift in Sources */,
-				4819148A205C573D002426AE /* QuickBT.swift in Sources */,
-				4819148C205C5DE9002426AE /* BluetoothDeviceHandler.m in Sources */,
+				48098A0B205F2C8C00445E6A /* AppDelegate.swift in Sources */,
+				48EF03CC205F2F7D00964761 /* RunAfterViewController.swift in Sources */,
+				48EF03C8205F2F7D00964761 /* BluetoothDeviceHandler.m in Sources */,
+				48EF03CB205F2F7D00964761 /* MainViewController.swift in Sources */,
+				48EF03CD205F2F7D00964761 /* Config.swift in Sources */,
+				48EF03C9205F2F7D00964761 /* BluetoothManagerHandler.m in Sources */,
+				48EF03CA205F2F7D00964761 /* QuickBT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		486E93712056DA8E001D4554 /* Main.storyboard */ = {
+		48098A0E205F2C8C00445E6A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				486E93722056DA8E001D4554 /* Base */,
+				48098A0F205F2C8C00445E6A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		486E93762056DA8F001D4554 /* LaunchScreen.storyboard */ = {
+		48098A13205F2C8C00445E6A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				486E93772056DA8F001D4554 /* Base */,
+				48098A14205F2C8C00445E6A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -216,7 +217,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		486E937C2056DA8F001D4554 /* Debug */ = {
+		48098A17205F2C8C00445E6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,12 +227,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -239,7 +238,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -267,14 +265,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		486E937D2056DA8F001D4554 /* Release */ = {
+		48098A18205F2C8C00445E6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,12 +284,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -297,7 +295,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -319,53 +316,43 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		486E937F2056DA8F001D4554 /* Debug */ = {
+		48098A1A205F2C8C00445E6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9975VG746Y;
 				INFOPLIST_FILE = QuickBT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itjesse.quickbt.QuickBT;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.itjesse.QuickBT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "QuickBT/QuickBT-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		486E93802056DA8F001D4554 /* Release */ = {
+		48098A1B205F2C8C00445E6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9975VG746Y;
 				INFOPLIST_FILE = QuickBT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itjesse.quickbt.QuickBT;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.itjesse.QuickBT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "QuickBT/QuickBT-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,25 +361,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		486E93632056DA8E001D4554 /* Build configuration list for PBXProject "QuickBT" */ = {
+		48098A02205F2C8B00445E6A /* Build configuration list for PBXProject "QuickBT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				486E937C2056DA8F001D4554 /* Debug */,
-				486E937D2056DA8F001D4554 /* Release */,
+				48098A17205F2C8C00445E6A /* Debug */,
+				48098A18205F2C8C00445E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		486E937E2056DA8F001D4554 /* Build configuration list for PBXNativeTarget "QuickBT" */ = {
+		48098A19205F2C8C00445E6A /* Build configuration list for PBXNativeTarget "QuickBT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				486E937F2056DA8F001D4554 /* Debug */,
-				486E93802056DA8F001D4554 /* Release */,
+				48098A1A205F2C8C00445E6A /* Debug */,
+				48098A1B205F2C8C00445E6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 486E93602056DA8E001D4554 /* Project object */;
+	rootObject = 480989FF205F2C8B00445E6A /* Project object */;
 }

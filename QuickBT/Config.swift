@@ -6,6 +6,9 @@
 //  Copyright © 2018 Jesse Zhu. All rights reserved.
 //
 
+import Foundation
+
+
 enum UserSettings: String {
     case RunAfterCommand = "RunAfterCommand"
     case AutoConnect = "AutoConnect"
