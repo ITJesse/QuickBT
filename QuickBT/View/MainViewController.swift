@@ -58,7 +58,7 @@ class MainViewController: UITableViewController, QuickBTDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let savedCommand = UserSettings.RunAfterCommand.object() ?? "DoNothing";
+        let savedCommand = UserSettings.RunAfterCommand.object() ?? "Exit";
         let command = RunAfterCommand.getCommandByString(value: savedCommand as! String).rawValue
         self.runAfterCommandLabel.text = command
     }

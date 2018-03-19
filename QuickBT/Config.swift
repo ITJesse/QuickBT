@@ -65,6 +65,7 @@ enum RunAfterCommand: String {
     case DoNothing = "什么也不做"
     case PlayMusic = "随机播放音乐"
     case PlayMusicAndExit = "随机播放音乐并退出"
+    case Exit = "退出"
     case NONE = ""
     
     public static let allCommands: [RunAfterCommand] = [.DoNothing, .PlayMusic, .PlayMusicAndExit]
@@ -77,6 +78,8 @@ enum RunAfterCommand: String {
             return .PlayMusic
         case "PlayMusicAndExit":
             return .PlayMusicAndExit
+        case "Exit":
+            return .Exit
         default:
             return .NONE
         }
