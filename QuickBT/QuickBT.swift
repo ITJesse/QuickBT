@@ -93,7 +93,11 @@ public class QuickBT {
     }
     
     public func startScanForDevices() {
+        self.resetAvailableDevices()
         bluetoothManagerHandler.startScan()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
+            self.stopScanForDevices()
+        }
     }
     
     public func stopScanForDevices() {

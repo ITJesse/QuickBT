@@ -11,9 +11,8 @@ import UIKit
 class RunAfterViewController: UITableViewController {
     private let config = UserDefaults.standard
     private let runAfterCommandByIndex = [
-        "DoNothing",
         "PlayMusic",
-        "PlayMusicAndExit"
+        "Exit"
     ];
     
     override func viewDidLoad() {

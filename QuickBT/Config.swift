@@ -62,22 +62,16 @@ enum UserSettings: String {
 
 
 enum RunAfterCommand: String {
-    case DoNothing = "什么也不做"
     case PlayMusic = "随机播放音乐"
-    case PlayMusicAndExit = "随机播放音乐并退出"
     case Exit = "退出"
     case NONE = ""
     
-    public static let allCommands: [RunAfterCommand] = [.DoNothing, .PlayMusic, .PlayMusicAndExit]
+    public static let allCommands: [RunAfterCommand] = [.PlayMusic, .Exit]
     
     public static func getCommandByString(value: String) -> RunAfterCommand {
         switch value {
-        case "DoNothing":
-            return .DoNothing
         case "PlayMusic":
             return .PlayMusic
-        case "PlayMusicAndExit":
-            return .PlayMusicAndExit
         case "Exit":
             return .Exit
         default:

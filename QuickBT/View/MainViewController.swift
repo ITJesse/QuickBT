@@ -7,14 +7,41 @@
 //
 
 import UIKit
+import MediaPlayer
+
+extension DispatchQueue {
+    private static var _onceTracker = [String]()
+    public class func once(token: String, block: () -> ()) {
+        objc_sync_enter(self)
+        defer {
+            objc_sync_exit(self)
+        }
+        if _onceTracker.contains(token) {
+            return
+        }
+        _onceTracker.append(token)
+        block()
+    }
+    
+    func async(block: @escaping ()->()) {
+        self.async(execute: block)
+    }
+    
+    func after(time: DispatchTime, block: @escaping ()->()) {
+        self.asyncAfter(deadline: time, execute: block)
+    }
+}
+
 
 class MainViewController: UITableViewController, QuickBTDelegate {
     
     private let quickBT = QuickBT.sharedInstance
     private let config = UserDefaults.standard
+    private let _onceConnectToken = NSUUID().uuidString
+    private let _onceRunCommandToken = NSUUID().uuidString
     @IBOutlet weak var autoConnectSwitch: UISwitch!
-    @IBOutlet weak var scanSwitch: UISwitch!
     @IBOutlet weak var runAfterCommandLabel: UILabel!
+    @IBOutlet weak var rescanLabel: UILabel!
     
     
     func receivedQuickBTNotification(notification: QuickBTNotification) {
@@ -22,9 +49,14 @@ class MainViewController: UITableViewController, QuickBTDelegate {
         switch notification {
         case .DeviceDiscovered:
             tableView.reloadData()
+            if !self.autoConnectSwitch.isOn {
+                break
+            }
             let savedAddress = UserSettings.AutoConnectAddress.object() as? String ?? ""
             if let i = quickBT.availableDevices.index(where: { $0.address == savedAddress }) {
-                self.connect(deviceIndex: i)
+                DispatchQueue.once(token: _onceConnectToken) {
+                    self.connect(deviceIndex: i)
+                }
             }
             break
         case .DeviceRemoved,
@@ -32,13 +64,47 @@ class MainViewController: UITableViewController, QuickBTDelegate {
             tableView.reloadData()
             break
         case .DiscoveryStateChanged:
-            scanSwitch.setOn(self.quickBT.isScanning(), animated: true)
+            if self.quickBT.isScanning() {
+                self.rescanLabel.textColor = UIColor.red
+                self.rescanLabel.text = "停止扫描"
+            } else {
+                self.rescanLabel.textColor = UIColor(red: 0, green: 0.478431, blue: 1, alpha: 1)
+                self.rescanLabel.text = "重新扫描"
+            }
             break
         case .DeviceConnectSuccess:
-            UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+            DispatchQueue.once(token: _onceRunCommandToken) {
+                self.runAfterCommand()
+            }
+            break
         default:
             break
         }
+    }
+    
+    func runAfterCommand() {
+        let savedCommand = UserSettings.RunAfterCommand.object() ?? "";
+        let command = RunAfterCommand.getCommandByString(value: savedCommand as! String);
+        print(command)
+        switch command {
+        case .PlayMusic:
+            self.playMusic()
+            UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+            break
+        case .Exit:
+            UIControl().sendAction(#selector(URLSessionTask.suspend), to: UIApplication.shared, for: nil)
+            break
+        default: break
+        }
+    }
+    
+    func playMusic() {
+        let allSongs =  MPMediaQuery()
+        let mediaPlayer = MPMusicPlayerController.systemMusicPlayer
+        mediaPlayer.shuffleMode = .songs
+        mediaPlayer.repeatMode = .all
+        mediaPlayer.setQueue(with: allSongs)
+        mediaPlayer.play()
     }
     
     override func viewDidLoad() {
@@ -65,16 +131,18 @@ class MainViewController: UITableViewController, QuickBTDelegate {
     
     //返回分区数
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     //返回每个分区中单元格的数量
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)
         -> Int {
-            if section == 1 {
+            if section == 2 {
                 return quickBT.availableDevices.count
-            }else{
-                return 3
+            } else if section == 1 {
+                return 1
+            } else {
+                return 2
             }
     }
     
@@ -82,14 +150,14 @@ class MainViewController: UITableViewController, QuickBTDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
             //只有第二个分区是动态的，其它默认
-            if indexPath.section == 1 {
+            if indexPath.section == 2 {
                 //用重用的方式获取标识为bluetoothCell的cell
                 let cell = tableView.dequeueReusableCell(withIdentifier: "bluetoothCell",
                                                          for: indexPath)
                 cell.textLabel?.text = quickBT.availableDevices[indexPath.row].name
                 cell.accessoryType = .detailButton
                 return cell
-            }else{
+            } else {
                 return super.tableView(tableView, cellForRowAt: indexPath)
             }
     }
@@ -123,14 +191,20 @@ class MainViewController: UITableViewController, QuickBTDelegate {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.section == 1 {
+        if indexPath.section == 2 {
            self.connect(deviceIndex: indexPath.row)
+        } else if indexPath.section == 1 {
+            if self.quickBT.isScanning() {
+                self.quickBT.stopScanForDevices()
+            } else {
+                self.quickBT.startScanForDevices()
+            }
         }
     }
     
     private func connect(deviceIndex: Int) {
         quickBT.stopScanForDevices()
-        let indexPath = IndexPath(row: deviceIndex, section: 1)
+        let indexPath = IndexPath(row: deviceIndex, section: 2)
         let cell:UITableViewCell! = tableView.cellForRow(at: indexPath)
         let spinner:UIActivityIndicatorView = UIActivityIndicatorView.init(activityIndicatorStyle: .gray)
         spinner.frame = CGRect(x:0, y:0, width:24, height:24)
@@ -146,13 +220,5 @@ class MainViewController: UITableViewController, QuickBTDelegate {
     @IBAction func onAutoConnectSwitchChange(_ sender: UISwitch) {
         print("here", sender)
         UserSettings.AutoConnect.set(value: sender.isOn)
-    }
-    
-    @IBAction func onScanSwitchChange(_ sender: UISwitch) {
-        if (sender.isOn) {
-            quickBT.startScanForDevices()
-        } else {
-            quickBT.stopScanForDevices()
-        }
     }
 }
